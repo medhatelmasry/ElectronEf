@@ -1,0 +1,14 @@
+@{
+  ViewData["Title"] = "Number of products by category";
+}
+<br />
+<h1>@ViewData["Title"]</h1>
+
+<div>
+  <c1-flex-chart binding-x="Name" chart-type="Bar" legend-position="None">
+    <c1-items-source source-collection="@ViewBag.CategoryProduct"></c1-items-source>
+    <c1-flex-chart-series binding="Count" name="Count" />
+    <c1-flex-chart-axis c1-property="AxisX" position="None" />
+    <c1-flex-chart-axis c1-property="AxisY" reversed="true" />
+  </c1-flex-chart>
+</div>
